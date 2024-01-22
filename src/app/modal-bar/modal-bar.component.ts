@@ -1,9 +1,6 @@
 import { Component } from '@angular/core';
 import { TablesComponent } from "../tables/tables.component";
 
-
-
-
 @Component({
     selector: 'app-modal-bar',
     standalone: true,
@@ -14,8 +11,4 @@ import { TablesComponent } from "../tables/tables.component";
 export class ModalBarComponent {
   
      
-
-     openmodal(){
-     
-     }
 }

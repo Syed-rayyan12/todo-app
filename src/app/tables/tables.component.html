@@ -1,6 +1,6 @@
 <div class=" container mern">
 
-    <p>Hello</p>
+    
     <table>
         <thead>
             <tr>
@@ -20,8 +20,13 @@
                 <td>{{item.productName}}</td>
                 <td>{{item.amount}}</td>
                 <td>{{item.date}}</td>
-                <td><i class="fa fa-pencil" aria-hidden="true"></i>
-                    <i class="fa fa-trash" aria-hidden="true"></i>
+                <td><i class="fa fa-pencil" aria-hidden="true" style="margin: 0px 11px; color: #4b4bb8 ; cursor: pointer"></i>
+                    <!-- <button type="button" class="btn btn-primary"> -->
+                        <i (click)="openModal()" class="fa fa-trash" aria-hidden="true" style="margin: 0px 11px; color: red; cursor: pointer;"></i>  
+                      <!-- </button> -->
+                           
+                     
+                                   
                 </td>
 
             </tr>
@@ -78,3 +83,4 @@
 </div>
 
 <app-editmodal></app-editmodal>
+<app-delete-modal *ngIf="openDeleteModal" (newItemEvent)="deleteConfirm($event)"></app-delete-modal>
